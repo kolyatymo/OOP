@@ -288,7 +288,7 @@ public:
 		}
 	}
 
-	void print() const
+	void printall() const
 	{
 		for (size_t i = 0; i < count; i++)
 		{
@@ -322,7 +322,7 @@ int main()
 	phoneBook.add(data1);
 	phoneBook.add(data2);
 	phoneBook.add(data3);
-	phoneBook.print();
+	phoneBook.printall();
 
 	while (true)
 	{
@@ -349,7 +349,7 @@ int main()
 			cout << "Enter index for remove --> ";
 			cin >> i;
 			phoneBook.remove(i - 1);
-			phoneBook.print();
+			phoneBook.printall();
 			break;
 		}
 		case 2:
