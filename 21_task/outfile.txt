@@ -1,0 +1,27 @@
+Index --> 1
+	 Name       --> Gesha
+	 Surname    --> Koval
+	 Patronymic --> Teaks
+	 HomePhone  --> 123456789
+	 WorkPhone  --> 987654321
+	 MobilePhone--> 555555555
+	 Sity       --> Kyiv
+	 Country    --> Ukraine
+Index --> 2
+	 Name       --> Vov
+	 Surname    --> Petro
+	 Patronymic --> Sido
+	 HomePhone  --> 56235236
+	 WorkPhone  --> 53255661
+	 MobilePhone--> 55432425
+	 Sity       --> Rivne
+	 Country    --> Ukraine
+Index --> 3
+	 Name       --> Sash
+	 Surname    --> Sidor
+	 Patronymic --> Petr
+	 HomePhone  --> 342545789
+	 WorkPhone  --> 623654321
+	 MobilePhone--> 63263676
+	 Sity       --> Lviv
+	 Country    --> Ukraine
