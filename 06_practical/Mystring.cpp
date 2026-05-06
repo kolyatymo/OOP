@@ -30,13 +30,13 @@ const char* MyString::getStr() const
 
 MyString MyString::operator*(const MyString& other) const
 {
-	int line1 = strlen(this->str);
-	int line2 = strlen(other.str);
-	int newSize = line1 + line2 + 1;
+	int len1 = strlen(this->str);
+	int len2 = strlen(other.str);
+	int newSize = len1 + len2 + 1;
 	char* newStr = new char[newSize];
 	int q = 0;
 
-	for (size_t i = 0; i < line1; i++)
+	for (size_t i = 0; i < len1; i++)
 	{
 		if (isContains(other.str, this->str[i]))
 			newStr[q++] = this->str[i];
@@ -47,14 +47,13 @@ MyString MyString::operator*(const MyString& other) const
 
 MyString MyString::operator/(const MyString& other) const
 {
-	int line1 = strlen(this->str);
-	int line2 = strlen(other.str);
-	int newSize = line1 + 1;
+	int len1 = strlen(this->str);
+	int newSize = len1 + 1;
 	char* newStr = new char[newSize];
 
 	int q = 0;
 
-	for (size_t i = 0; i < line1; i++)
+	for (size_t i = 0; i < len1; i++)
 	{
 		if (!isContains(other.str, this->str[i]))
 			newStr[q++] = this->str[i];
@@ -175,6 +174,7 @@ MyString MyString::operator!() const
 
 MyString::~MyString()
 {
+	delete[] this->str;
 }
 
 void MyString::copyStr(char*& dest, const char* source)
