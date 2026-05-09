@@ -51,6 +51,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "10_Dynamic date struct_sing
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "11_Dynamic data structures", "11_Dynamic data structures\11_Dynamic data structures.vcxproj", "{E34A7791-5C27-4A63-8B61-76ADD9F6B527}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "29_task", "29_task\29_task.vcxproj", "{6123F434-A3E8-4E00-84EB-C84C27EC4187}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -251,6 +253,14 @@ Global
 		{E34A7791-5C27-4A63-8B61-76ADD9F6B527}.Release|x64.Build.0 = Release|x64
 		{E34A7791-5C27-4A63-8B61-76ADD9F6B527}.Release|x86.ActiveCfg = Release|Win32
 		{E34A7791-5C27-4A63-8B61-76ADD9F6B527}.Release|x86.Build.0 = Release|Win32
+		{6123F434-A3E8-4E00-84EB-C84C27EC4187}.Debug|x64.ActiveCfg = Debug|x64
+		{6123F434-A3E8-4E00-84EB-C84C27EC4187}.Debug|x64.Build.0 = Debug|x64
+		{6123F434-A3E8-4E00-84EB-C84C27EC4187}.Debug|x86.ActiveCfg = Debug|Win32
+		{6123F434-A3E8-4E00-84EB-C84C27EC4187}.Debug|x86.Build.0 = Debug|Win32
+		{6123F434-A3E8-4E00-84EB-C84C27EC4187}.Release|x64.ActiveCfg = Release|x64
+		{6123F434-A3E8-4E00-84EB-C84C27EC4187}.Release|x64.Build.0 = Release|x64
+		{6123F434-A3E8-4E00-84EB-C84C27EC4187}.Release|x86.ActiveCfg = Release|Win32
+		{6123F434-A3E8-4E00-84EB-C84C27EC4187}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
