@@ -21,15 +21,15 @@ int main()
     cout << "template type string --> " << sum(e, f) << endl;*/
 
 
-    /*Array<double, 10> obj(2.2);
+   /* Array<double, 10> obj(2.2);
     obj[0] = 25.3;
     obj[2] = 33.3;
 
     cout << obj;
 
     Array<string, 5> str("abs");
-    str.print();
-    */
+    str.print();*/
+    
 
 }
 
