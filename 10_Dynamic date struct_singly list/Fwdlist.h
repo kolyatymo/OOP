@@ -31,6 +31,14 @@ public:
 
 	void operator=(const Fwdlist& other);
 
+	Fwdlist<T>& copy(const Fwdlist& other);
+
+	Fwdlist<T> operator+(const Fwdlist& other);
+
+	Fwdlist<T> operator*(const Fwdlist& other);
+
+
+
 	
 
 
@@ -60,9 +68,10 @@ template<typename T>
 inline void Fwdlist<T>::AddHead(const T& data)
 {
 	/* Node<T>* */ auto tmp = new Node<T>(data, head);
-	head = tmp;
 	if (isempty())
 		tail = tmp;
+
+	head = tmp;
 	++size;
 }
 
@@ -96,7 +105,7 @@ inline void Fwdlist<T>::RemoveHead()
 	auto tmp = head;
 	head = tmp->next;
 	--size;
-	delete[] tmp;
+	delete tmp;
 	if (isempty())
 		tail = nullptr;
 
@@ -114,6 +123,7 @@ inline bool Fwdlist<T>::isempty() const
 template<typename T>
 inline void Fwdlist<T>::AddTail(const T& data)
 {
+	
 	auto tmp = new Node<T>(data);
 	++size;
 	if (isempty())
@@ -143,21 +153,25 @@ inline void Fwdlist<T>::RemoveAt(const T& data)
 	if (isempty())
 		return;
 
-	auto tmp = head;
-
-	while (tmp != nullptr)
+	if (head->data == data)
 	{
-		if (tmp->data == data)
-		{
-
-
-			if (tmp == head) {
-				head = head->next;
-			}
-			delete tmp;
-			--size;
-		}
+		RemoveHead();
+		return;
 	}
+
+	auto tmp = head;
+	while (tmp->next->data != data)
+	{
+		tmp = tmp->next;
+	}
+
+	if (tmp->next == nullptr)
+		return;
+
+	auto tmp2 = tmp->next;
+	tmp->next = tmp2->next;
+	delete tmp2;
+	--size;
 	
 }
 
@@ -175,8 +189,66 @@ inline void Fwdlist<T>::operator=(const Fwdlist& other)
 }
 
 template<typename T>
+inline Fwdlist<T>& Fwdlist<T>::copy(const Fwdlist& other)
+{
+	clear();
+
+	auto tmp = other.head;
+	while (tmp != nullptr)
+	{
+		AddTail(tmp->data);
+		tmp = tmp->next;
+	}
+	return (*this);
+}
+
+template<typename T>
+inline Fwdlist<T> Fwdlist<T>::operator+(const Fwdlist& other)
+{
+	Fwdlist<T> result;
+
+	auto tmp = head;
+	auto tmp2 = other.head;
+	while (tmp != nullptr)
+	{
+		result.AddHead(tmp->data);
+		tmp = tmp->next;
+	}
+	while (tmp2 != nullptr)
+	{
+		result.AddHead(tmp2->data);
+		tmp2 = tmp2->next;
+	}
+
+	return result;
+
+}
+
+template<typename T>
+inline Fwdlist<T> Fwdlist<T>::operator*(const Fwdlist& other)
+{
+	Fwdlist<T> result;
+
+	auto tmp = head;
+	while (tmp != nullptr)
+	{
+		auto tmp2 = other.head;
+		while (tmp2 != nullptr)
+		{
+			if (tmp->data == tmp2->data)
+			{
+				result.AddHead(tmp->data);
+	
+			}
+			tmp2 = tmp2->next;
+		}
+		tmp = tmp->next;
+	}
+	return result;
+}
+
+template<typename T>
 inline Fwdlist<T>::~Fwdlist()
 {
-
 	clear();
 }
