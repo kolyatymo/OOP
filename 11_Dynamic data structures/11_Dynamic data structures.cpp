@@ -8,14 +8,14 @@ int main()
 	for (size_t i = 0; i < 3; i++)
 	{
 		list.AddHead(rand() % 10 + 1);
-		list.print();
+		list.Show();
 	}
 	list.printRev();
 
 	for (size_t i = 0; i < 3; i++)
 	{
 		list.AddTail(rand() % 10 + 1);
-		list.print();
+		list.Show();
 	}
 	list.printRev();
 
@@ -24,31 +24,45 @@ int main()
 	while (!list.isEmpty())
 	{
 		list.RemoveHead();
-		list.print();
+		list.Show();
 		list.printRev();
 	}*/
 
 
 	/*list.RemoveData(1);
-	list.print();
+	list.Show();
 	list.printRev();*/
 
 	list.RemoveTail();
-	list.print();
+	list.Show();
 	list.printRev();
 	
 	list.RemoveHead();
-	list.print();
+	list.Show();
 	list.printRev();
 	cout << "\n\n";
 
-	/*list.clear();
-	list.print();*/
+	list.insByIndex(2, 100);
+	list.Show();
+	
+	/*list.insByIndex(3, 100);
+	list.Show();*/
+
+	/*list.DeleteAll();
+	list.Show();*/
 
 	/*List<int> list2 = list;
-	list2.print();*/
+	list2.Show();
 
 	list.delByIndex(2);
-	list.print();
+	list.Show();*/
 
+
+
+	//cout << list.findNode(100);
+
+	//cout << list.findAndReplace(100, 20);
+
+	list.revolution();
+	list.Show();
 }

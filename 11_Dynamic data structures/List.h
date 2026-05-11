@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 #include <iostream>
 using std::cout;
 using std::endl;
@@ -37,26 +37,30 @@ public:
 
 	bool isEmpty() const;
 
-	void print() const;
+	void Show() const;
 	void printRev() const;
 
 	void RemoveData(const T& data);
 
-	void clear();
+	void DeleteAll();
 	
 	void operator = (const List& other);
 
 	void delByIndex(int index);
 	void insByIndex(int index, const T& value);
 
-	//void opeartor[](int index);
+	
+	int findNode(const T& data);
+
+	int findAndReplace(const T& data, const T& value);
+
+	void revolution();
 
 
 
 	~List();
 
 private:
-	Node<T>* findNode(const T& data);
 	Node<T>* head = nullptr, *tail = nullptr;
 	size_t size = 0;
 
@@ -137,7 +141,7 @@ inline bool List<T>::isEmpty() const
 }
 
 template<typename T>
-inline void List<T>::print() const
+inline void List<T>::Show() const
 {
 	if (isEmpty())
 	{
@@ -196,18 +200,10 @@ inline void List<T>::RemoveData(const T& data)
 }
 
 template<typename T>
-inline void List<T>::clear()
+inline void List<T>::DeleteAll()
 {
-	/*while (head != nullptr)
-	{
-		RemoveHead();
-	}
-	this->head = nullptr;
-	this->tail = nullptr;
-	this->size = 0;*/
 
-
-	if (!isEmpty)
+	if (!isEmpty())
 	{
 		this->head = nullptr;
 		this->tail = nullptr;
@@ -219,7 +215,7 @@ inline void List<T>::clear()
 template<typename T>
 inline void List<T>::operator=(const List& other)
 {
-	clear();
+	DeleteAll();
 
 	auto tmp = other.head;
 	while (tmp != nullptr)
@@ -257,43 +253,99 @@ inline void List<T>::delByIndex(int index)
 template<typename T>
 inline void List<T>::insByIndex(int index, const T& value)
 {
+	
 	if (index < 0 or index > size)
 		cout << "index not found";
 
-	if (isEmpty())
-	{
-		head = tmp;
-		tail = tmp;
-	}
-	auto tmp =head;
-	for (size_t i = 0; i < index; i++)
+	auto tmp = head;
+
+	for (int i = 0; i < index; i++)
 		tmp = tmp->next;
 
-	auto newNode = Node<T>(value);
+	auto newNode = new Node<T>(value);
 
+	newNode->next = tmp;
 	newNode->prev = tmp->prev;
-	newNode->nexe = tmp;
 
-	tmp->prev->next = newNode;
+	if (tmp->prev != nullptr)
+		tmp->prev->next = newNode;
+	else
+		head = newNode;
+
 	tmp->prev = newNode;
 
 	++size;
 }
 
+
+
 template<typename T>
 inline List<T>::~List()
 {
-	clear();
+	DeleteAll();
 }
 
 
 template<typename T>
-inline Node<T>* List<T>::findNode(const T& data)
+inline int List<T>::findNode(const T& data)
 {
 	auto tmp = head;
-	while (tmp != nullptr && tmp->data != data)
+	int count = 1;
+	while (tmp != nullptr)
 	{
+		if (tmp->data == data)
+		{
+			return count;
+		}
+		
 		tmp = tmp->next;
+		count += 1;
 	}
-	return tmp;
+	
+	return -1;
 }
+
+template<typename T>
+inline int List<T>::findAndReplace(const T& data, const T& value)
+{
+	auto tmp = head;
+	int count = 0;
+
+	while (tmp != nullptr)
+	{
+		if (tmp->data == data)
+		{
+			tmp->data = value;
+			count += 1;
+		}
+		tmp = tmp->next;
+		
+	}
+	if (count > 0)
+		return count;
+	else
+		return-1;
+
+	
+
+}
+
+template<typename T>
+inline void List<T>::revolution()
+{
+	List<T> newList;
+	auto tmp = head;
+	
+	while (tmp != nullptr)
+	{
+		newList.AddHead(tmp->data);
+		tmp = tmp->next;
+
+	}
+
+	head = newList.head;
+	tail = newList.tail;
+
+
+}
+
