@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{8dede75b-9ddb-45a0-88e5-53ccbdd27b55}</ProjectGuid>
-    <RootNamespace>My14practical</RootNamespace>
+    <ProjectGuid>{c2e46144-7bf2-4aa0-bdc4-9f6c501e3fba}</ProjectGuid>
+    <RootNamespace>My15Exception</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -127,25 +127,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="14_practical.cpp" />
-    <ClCompile Include="Animal.cpp" />
-    <ClCompile Include="Cat.cpp" />
-    <ClCompile Include="Dog.cpp" />
-    <ClCompile Include="Hamster.cpp" />
-    <ClCompile Include="kangaroo.cpp" />
-    <ClCompile Include="Perrot.cpp" />
-    <ClCompile Include="Shark.cpp" />
-    <ClCompile Include="Zoo.cpp" />
+    <ClCompile Include="15_Exception.cpp" />
+    <ClCompile Include="Rectangle.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Animal.h" />
-    <ClInclude Include="Cat.h" />
-    <ClInclude Include="Dog.h" />
-    <ClInclude Include="Hamster.h" />
-    <ClInclude Include="kangaroo.h" />
-    <ClInclude Include="Perrot.h" />
-    <ClInclude Include="Shark.h" />
-    <ClInclude Include="Zoo.h" />
+    <ClInclude Include="MyException.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

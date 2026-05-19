@@ -15,57 +15,33 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="14_practical.cpp">
+    <ClCompile Include="33_task.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Animal.cpp">
+    <ClCompile Include="Shape.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Dog.cpp">
+    <ClCompile Include="Point.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Cat.cpp">
+    <ClCompile Include="Circle.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Perrot.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Hamster.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="kangaroo.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Shark.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Zoo.cpp">
+    <ClCompile Include="Cylinder.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Animal.h">
+    <ClInclude Include="Shape.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Dog.h">
+    <ClInclude Include="Point.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Cat.h">
+    <ClInclude Include="Circle.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Perrot.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Hamster.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="kangaroo.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Shark.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Zoo.h">
+    <ClInclude Include="Cylinder.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
