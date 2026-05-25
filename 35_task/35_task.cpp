@@ -57,17 +57,23 @@ int main()
     //cout << "_____________ Static_Cast ______________" << endl;
 
 
-   /*Grandpa& grand = dad;
+    /*Grandpa& grand = dad;
 
     Daddy dady = (Daddy&)dad;
 
     for (Grandpa* f : family)
     {
         f->print();
-        if (typeid(dad) == typeid(Daddy))
+        if (typeid(*f) == typeid(Daddy))
         {
-            Daddy dady = static_cast<Daddy&>(dad);
-            dady.print();
+            Daddy& dady = static_cast<Daddy&>(*f);
+            dady.Walk();
+        }
+        if (typeid(*f) == typeid(Son))
+        {
+            Son& son = static_cast<Son&>(*f);
+            son.Walk();
+            son.Play();
         }
 
         cout << endl;
