@@ -17,7 +17,7 @@ void print(const ContType& cont, const string& prompt = "")
 	}cout << endl;
 }
 
-int inc(int numb)
+int div_(int numb)
 {
 	return numb / 2;
 }
@@ -26,6 +26,8 @@ int inc(int numb)
 int main()
 {
 	// (1) 
+
+	cout << "\n-------- (1) ---------\n";
 
 	vector<int> v1;
     vector<int> v2(10, 0);
@@ -75,6 +77,9 @@ int main()
 
 	// (2)
 
+	cout << "\n-------- (2) ---------\n";
+
+
 	print(v3, "Print v3 : ");
 
 	for (auto it = v1.rbegin(); it != v1.rend(); it++)
@@ -84,14 +89,25 @@ int main()
 
 	// (3)
 
-	int n = 1;
+	cout << "\n-------- (3) ---------\n";
+
+
+	/*int n = 1;
 
 	for (size_t i = 0; i < v2.size(); i++)
 	{
 		v2[i] += i+1;
-	}
-	print(v2, "Print v2 : ");
+	}*/
 
+	// variant 2
+
+	int n = 1;
+
+	for (auto it = v2.begin(); it != v2.end(); it++, n++)
+	{
+		*it += n;
+		cout << *it << "\t";
+	}cout << endl;
 
 
 	for (size_t i = 0; i < v2.size(); i++)
@@ -110,6 +126,9 @@ int main()
 
 	// (4)
 
+	cout << "\n-------- (4) ---------\n";
+
+
 	vector<int> tmp;
 
 	for (size_t i = 0; i < v4.size(); i++)
@@ -124,21 +143,39 @@ int main()
 
 	// (5)
 
+	cout << "\n-------- (5) ---------\n";
+
+
 	v5.clear();
 
-	for (size_t i = 0; i < v4.size(); i++)
+	/*for (size_t i = 0; i < v4.size(); i++)
 	{
 		if (v4[i] % 2 == 0)
 		{
 			v5.push_back(v4[i]);
 		}
+	}*/
+
+	// variant 2
+
+	for (auto it = v4.begin(); it != v4.end(); it++)
+	{
+		if (*it % 2 == 0)
+			v5.push_back(*it);
 	}
 
-	transform(v5.begin(), v5.end(), v5.begin(), inc);
+	//transform(v5.begin(), v5.end(), v5.begin(), div_);
+
+	// variant 2
+
+	transform(v5.begin(), v5.end(), v5.begin(), [](int el) {return el / 2;});
 
 	print(v5, "Print v5 : ");
 
 	// (6)
+
+	cout << "\n-------- (6) ---------\n";
+
 
 	int value;
 
@@ -155,6 +192,9 @@ int main()
 	cout << "\n Count of "<< value << " --> " << count_if(v5.begin(), v5.end(), [&](int el) {return el == value; }) << endl;
 
 	// (7)
+
+	cout << "\n-------- (7) ---------\n";
+
 
 	swap(v4, v5);
 
