@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{a9a8a912-3dbe-4d3e-9e40-6d3e3b10709d}</ProjectGuid>
-    <RootNamespace>My01intooop</RootNamespace>
+    <ProjectGuid>{44e1c5ce-c5a5-43d7-9307-12f19a4333d9}</ProjectGuid>
+    <RootNamespace>My37task</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -127,9 +127,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="01_into_oop.cpp" />
-    <ClCompile Include="Source.cpp" />
-    <ClCompile Include="Source1.cpp" />
+    <ClCompile Include="37_task.cpp" />
+    <ClCompile Include="37_taskk.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Vocabulary.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

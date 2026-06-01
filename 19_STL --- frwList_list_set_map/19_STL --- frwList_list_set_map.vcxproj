@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{a9a8a912-3dbe-4d3e-9e40-6d3e3b10709d}</ProjectGuid>
-    <RootNamespace>My01intooop</RootNamespace>
+    <ProjectGuid>{7ab3b14f-1855-4515-85af-e2c33d5e45a1}</ProjectGuid>
+    <RootNamespace>My19STLfrwListlistsetmap</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -127,9 +127,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="01_into_oop.cpp" />
-    <ClCompile Include="Source.cpp" />
-    <ClCompile Include="Source1.cpp" />
+    <ClCompile Include="19_STL --- frwList_list_set_map.cpp" />
+    <ClCompile Include="TestFrwList.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="TestFrwList.h" />
+    <ClInclude Include="TestList.h" />
+    <ClInclude Include="TestMap_Multimap.h" />
+    <ClInclude Include="Test_multiset_set.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

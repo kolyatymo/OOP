@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{a9a8a912-3dbe-4d3e-9e40-6d3e3b10709d}</ProjectGuid>
-    <RootNamespace>My01intooop</RootNamespace>
+    <ProjectGuid>{f8785fa9-cbee-43e1-a186-6f2c3c5c9a5f}</ProjectGuid>
+    <RootNamespace>finalwork</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -127,9 +127,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="01_into_oop.cpp" />
-    <ClCompile Include="Source.cpp" />
-    <ClCompile Include="Source1.cpp" />
+    <ClCompile Include="final_work.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="BoslvlOne.h" />
+    <ClInclude Include="BoslvlThree.h" />
+    <ClInclude Include="BoslvlTwo.h" />
+    <ClInclude Include="Enemy.h" />
+    <ClInclude Include="Hero.h" />
+    <ClInclude Include="Main.h" />
+    <ClInclude Include="Shop.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

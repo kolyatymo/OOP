@@ -151,6 +151,7 @@ int main()
 	transform(d.begin(), d.end(), d.begin(), inc);
 	print(d, "\n Deque (after) : ");
 
+
 	sort(d.begin(), d.end());
 	print(d, "\n Deque (after sort) : ");
 
