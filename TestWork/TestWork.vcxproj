@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{f8785fa9-cbee-43e1-a186-6f2c3c5c9a5f}</ProjectGuid>
-    <RootNamespace>finalwork</RootNamespace>
+    <ProjectGuid>{febd44ac-b672-455a-918c-ad66624d8eed}</ProjectGuid>
+    <RootNamespace>TestWork</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -127,19 +127,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="final_work.cpp" />
+    <ClCompile Include="TestWork.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="BoslvlOne.h" />
-    <ClInclude Include="BoslvlThree.h" />
-    <ClInclude Include="BoslvlTwo.h" />
-    <ClInclude Include="Enemy.h" />
-    <ClInclude Include="ExceptionShop.h" />
-    <ClInclude Include="Hero.h" />
-    <ClInclude Include="Item.h" />
-    <ClInclude Include="Main.h" />
-    <ClInclude Include="Shop.h" />
-    <ClInclude Include="weakEnemies.h" />
+    <ClInclude Include="Increment.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

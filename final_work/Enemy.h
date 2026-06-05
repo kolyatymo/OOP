@@ -11,6 +11,7 @@ public:
 	{
 		this->reward = reward;
 	}
+
 	size_t getReward()
 	{
 		return reward;
