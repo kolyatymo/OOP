@@ -5,6 +5,6 @@ class BoslvlTwo :
 {
 public:
     BoslvlTwo()
-        :Enemy("Panda Kungfu", 130, 20, 80){}
+        :Enemy("Bos lvl 2 - (Panda Kungfu)", 130, 20, 80, 10, 0){}
 };
 

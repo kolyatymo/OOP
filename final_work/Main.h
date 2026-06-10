@@ -8,6 +8,7 @@ protected:
 	string name;
 	size_t hp;
 	size_t damage;
+	bool alive = true;
 public:
 	Main(const string& name, const size_t& hp, const size_t& damage)
 	{
@@ -16,15 +17,58 @@ public:
 		this->damage = damage;
 	}
 
-	virtual void attack(Main& attack)
+	void setDamage(const size_t& damage)
 	{
-		attack.hp -= damage;
+		this->damage = damage;
 	}
 
-	bool Alive()
+	size_t getDamage() const
 	{
-		return hp > 0;
+		return damage;
 	}
+
+	void setName(const string& name)
+	{
+		this->name = name;
+	}
+
+	string getName() const
+	{
+		return name;
+	}
+
+	virtual void attack(Main& attack)
+	{
+		attack.takeDamage(getDamage());
+	}
+
+	void takeDamage(size_t dmg)
+	{
+		if (hp > dmg)
+			hp -= dmg;
+		else
+		{
+			hp = 0;
+			alive = false;
+		}
+	}
+
+	void heal(size_t amount)
+	{
+		hp += amount;
+	}
+
+
+	bool Alive() const
+	{
+		return alive && hp > 0;
+	}
+
+	void setAlive(bool state)
+	{
+		alive = state;
+	}
+
 	int getHp()
 	{
 		return hp;

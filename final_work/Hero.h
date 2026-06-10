@@ -10,6 +10,9 @@ private:
 	size_t stone;
 	size_t gold;
 	size_t diamont;
+	int x, y;
+
+	size_t step;
 
 	size_t heals;
 	size_t shield;
@@ -26,6 +29,37 @@ public:
 		shield = 0;
 		heals = 10;
 		reward = 0;
+		step = 0;
+		x = 10;
+		y = 19;
+	}
+
+	void setStep(const size_t& step)
+	{
+		this->step = step;
+	}
+
+	size_t& getStep()
+	{
+		return step;
+	}
+
+	int getX() const 
+	{ 
+		return x; 
+	}
+	int getY() const 
+	{ 
+		return y; 
+	}
+
+	void setX(int x) 
+	{
+		this->x = x;
+	}
+	void setY(int y) 
+	{
+		this->y = y;
 	}
 
 	void AddItem(const Item& item)
@@ -47,7 +81,7 @@ public:
 
 	void setWood(const size_t& wood)
 	{
-		this->wood = wood;
+			this->wood = wood;
 	}
 	void setStone(const size_t& stone)
 	{
@@ -73,6 +107,22 @@ public:
 	{
 		this->reward = reward;
 	}
+
+	void addResurs()
+	{
+		if (step % 2 == 0)
+			wood++;
+
+		if (step % 4 == 0)
+			stone++;
+
+		if (step % 6 == 0)
+			gold++;
+
+		if (step % 8 == 0)
+			diamont++;
+	}
+
 
 	const size_t& getWood()
 	{

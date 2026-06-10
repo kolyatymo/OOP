@@ -5,6 +5,6 @@ class BoslvlThree :
 {
 public:
     BoslvlThree()
-        :Enemy("Tailynd", 170, 30, 100){}
+        :Enemy("Bos lvl 3 - (Tailynd)", 170, 30, 100, 10, 0){}
 };
 

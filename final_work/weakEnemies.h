@@ -5,6 +5,6 @@ class weakEnemies :
 {
 public:
 	weakEnemies()
-		:Enemy("Mob", 30, 5, 10){}
+		:Enemy("Mob", 30, 5, 10, 8, 18){}
 };
 

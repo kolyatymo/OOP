@@ -5,6 +5,6 @@ class BoslvlOne : public Enemy
 {
 public:
 	BoslvlOne()
-		:Enemy("Master ioda", 100, 10, 50){}
+		:Enemy("Bos lvl 1 (Master ioda)", 100, 10, 50, 10, 0){}
 };
 

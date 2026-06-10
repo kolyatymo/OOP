@@ -3,6 +3,14 @@
 #include "Hero.h"
 #include "Item.h"
 #include "Shop.h"
+#include "weakEnemies.h"
+#include "Fight.h"
+#include "Enemy.h"
+#include "BoslvlOne.h"
+#include "BoslvlTwo.h"
+#include "BoslvlThree.h"
+#include "Maps.h"
+#include "Game.h"
 
 
 
@@ -35,6 +43,14 @@ int main()
 
      //hero.Inventory();
 
+    Game game;
+    game.run();
+
+   /* Maps map;
+    map.DrawMap();*/
+
+   /* Game game;
+    game.run();
 
 
     Hero hero;
@@ -48,20 +64,20 @@ int main()
 
     int choice;
 
-    while (true)
+    while (hero.Alive())
     {
 
 
         cout << "\n========== GAME MENU ==========\n";
-        cout << "1 --> Show inventory\n";
-        cout << "2 --> Buy wooden sword\n";
-        cout << "3 --> Buy stone sword\n";
-        cout << "4 --> Buy gold sword\n";
-        cout << "5 --> Buy diamond sword\n";
-        cout << "6 --> Buy heals\n";
-        cout << "7 --> Repair shield\n";
-        cout << "8 --> Exchange resources\n";
-        cout << "9 --> Show HP\n";
+        cout << "1  --> Show inventory\n";
+        cout << "2  --> Buy wooden sword\n";
+        cout << "3  --> Buy stone sword\n";
+        cout << "4  --> Buy gold sword\n";
+        cout << "5  --> Buy diamond sword\n";
+        cout << "6  --> Buy heals\n";
+        cout << "7  --> Repair shield\n";
+        cout << "8  --> Exchange resources\n";
+        cout << "9  --> Show HP\n";
         cout << "================================\n";
         cout << "Choose --> ";
         cin >> choice;
@@ -104,6 +120,8 @@ int main()
             cout << "HP --> " << hero.getHp() << endl;
             break;
         }
+
     }
+    cout << "Game over!!!";*/
 }
 
