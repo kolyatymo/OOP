@@ -2,6 +2,8 @@
 
 void Game::run()
 {
+    cout << "input ESC for MENU\nand arrows for GAME";
+
     maps.LoadLevel(level, hero, enemies, boss1, boss2, boss3, currentBoss);
     while (hero.Alive())
     {

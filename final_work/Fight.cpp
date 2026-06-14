@@ -26,7 +26,9 @@ void Fight::fight(Hero& hero, Enemy& enemy)
 		{
 			hero.attack(enemy);
 			if (enemy.Alive())
+			{
 				enemy.attack(hero);
+			}
 			break;
 		}
 		case 2:

@@ -39,14 +39,20 @@ public:
     void updateMap(Hero& hero, vector<Enemy>& enemies, BoslvlOne& boss1, BoslvlTwo& boss2, BoslvlThree& boss3)
     {
         for (int i = 0; i < ROW; i++)
+        {
             for (int j = 0; j < COL; j++)
+            {
                 map[i][j] = '.';
+            }
+        }
 
         map[hero.getY()][hero.getX()] = 'H';
 
         for (auto& enemy : enemies)
+        {
             if (enemy.Alive())
                 map[enemy.getY()][enemy.getX()] = 'E';
+        }
 
         if (boss1.Alive())
             map[boss1.getY()][boss1.getX()] = 'B';

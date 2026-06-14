@@ -9,6 +9,7 @@
 #include "Shop.h"
 #include <conio.h>
 
+
 enum KeyRun
 {
     UP = 72, DOWN = 80, LEFT = 75, RIGHT = 77
@@ -22,7 +23,6 @@ public:
         level = 1;
     }
 
-    void run();
 
     enum GameState
     {
@@ -30,6 +30,10 @@ public:
     };
 
     void showMenu();
+    void input();
+    void update();
+    void render();
+    void run();
 
 private:
     GameState state = MAP;
@@ -42,10 +46,6 @@ private:
     Enemy* currentBoss = nullptr;
     Maps maps;
     Shop shop;
-
     int level = 1;
-    void input();
-    void update();
-    void render();
 };
 
