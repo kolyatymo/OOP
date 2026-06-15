@@ -130,6 +130,8 @@
     <ClCompile Include="Fight.cpp" />
     <ClCompile Include="final_work.cpp" />
     <ClCompile Include="Game.cpp" />
+    <ClCompile Include="Map.cpp" />
+    <ClCompile Include="Player.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BoslvlOne.h" />
@@ -142,7 +144,9 @@
     <ClInclude Include="Hero.h" />
     <ClInclude Include="Item.h" />
     <ClInclude Include="Main.h" />
+    <ClInclude Include="Map.h" />
     <ClInclude Include="Maps.h" />
+    <ClInclude Include="Player.h" />
     <ClInclude Include="Shop.h" />
     <ClInclude Include="weakEnemies.h" />
   </ItemGroup>
